@@ -17,6 +17,9 @@ set autoindent
 " use intelligent indentation for C
 set smartindent
 
+"disable folding ie. vim may condense many lines into 1
+set nofoldenable
+
 " configure tabwidth and insert spaces instead of tabs
 set tabstop=8        " tab width is 8 spaces
 set shiftwidth=8     " indent also with 8 spaces
@@ -28,6 +31,9 @@ highlight ColorColumn ctermbg=darkgray
 set t_Co=256
 syntax on
 "colorscheme wombat256
+set background=dark
+colorscheme solarized
+
 
 " turn line numbers on
 set number
