@@ -25,6 +25,10 @@ set tabstop=8        " tab width is 8 spaces
 set shiftwidth=8     " indent also with 8 spaces
 set noexpandtab        " no expand tabs to spaces
 set colorcolumn=100
+
+:filetype on
+autocmd FileType python set shiftwidth=4 tabstop=4 expandtab
+
 highlight ColorColumn ctermbg=darkgray
 
 " turn syntax highlighting on
