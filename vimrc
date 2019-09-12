@@ -93,3 +93,13 @@ source ~/cscope_maps.vim
 " press F5 to reload cscope tags
 map <F5> :!cscope -Rb<CR>:cs reset<CR><CR>  
 set title
+
+" prevent vim from un-indenting python comments
+set nosmartindent
+set cindent
+filetype plugin indent on
+set cinkeys-=0#
+set indentkeys-=0#
+autocmd FileType * set cindent "some file types override it
+
+
