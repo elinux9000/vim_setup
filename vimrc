@@ -102,4 +102,5 @@ set cinkeys-=0#
 set indentkeys-=0#
 autocmd FileType * set cindent "some file types override it
 
-
+" fix matching parenthesis color
+hi MatchParen cterm=none ctermbg=green ctermfg=blue
