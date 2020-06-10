@@ -104,3 +104,10 @@ autocmd FileType * set cindent "some file types override it
 
 " fix matching parenthesis color
 hi MatchParen cterm=none ctermbg=green ctermfg=blue
+
+
+" load folds
+au BufWinEnter * silent loadview
+
+" save folds
+au BufWinLeave * mkview
