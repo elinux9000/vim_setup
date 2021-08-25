@@ -1,7 +1,15 @@
 which vim
 if [ $? -ne 0 ]
 	then echo "Vim is not installed."
-	exit
+	echo "sudo apt-get -y install vim (hit enter to install n to quit)?"
+	read resp
+	if [ $resp = "n" ] 
+	then
+		exit
+	else
+		echo "Installing vim"
+		sudo apt-get -y install vim
+	fi
 fi
 
 #Check if bashrc has vim alias
