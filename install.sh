@@ -3,7 +3,7 @@ if [ $? -ne 0 ]
 	then echo "Vim is not installed."
 	echo "sudo apt-get -y install vim (hit enter to install n to quit)?"
 	read resp
-	if [ $resp = "n" ] 
+	if [ $resp == "n" ] 
 	then
 		exit
 	else
@@ -41,10 +41,10 @@ gnome-terminal-colors-solarized-master/install.sh
 
 echo "PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(parse_git_branch)\$ '" >>.bashrc
 
+cat <<EOF >> .bashrc
 parse_git_branch() {                                                                                
         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'                          
 } 
-
-
+EOF
 
 
