@@ -105,9 +105,10 @@ autocmd FileType * set cindent "some file types override it
 " fix matching parenthesis color
 hi MatchParen cterm=none ctermbg=green ctermfg=blue
 
-
+" vim saves each view for a file in .vim/views.  This can lead to strange or unexpected behaviour as vim will use these saved settings not those in .vimrc.
+" so I am commenting this out.
 " load folds
-au BufWinEnter * silent loadview
+""""""""""" commented out au BufWinEnter * silent loadview
 
 " save folds
-au BufWinLeave * mkview
+"""""""" commented out au BufWinLeave * mkview
